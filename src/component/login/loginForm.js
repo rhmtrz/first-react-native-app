@@ -8,6 +8,17 @@ import {
  } from 'react-native';
 
 export default class LoginForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: '',
+    }
+  }
+
+  login = () => {
+    alert('Text');
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -18,13 +29,17 @@ export default class LoginForm extends Component {
           keyboardType="email-address"
           autoCapitalize="none"
           autoCorrect={false}
+          onChangeText={(username) => this.setState({username})}
           style={styles.input}/>
         <TextInput
           placeholder="Password"
           secureTextEntry
           ref={(input) => this.passwordInput = input}
+          onPress={(password) => this.setState({password})}
           style={styles.input}/>
-        <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={this.login}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
       </View>
