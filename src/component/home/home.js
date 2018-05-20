@@ -4,7 +4,7 @@ import Login from './../login/login';
 import ScreenOne from './screenOne';
 import Signup from './../signup/signup';
 import { StackNavigator } from 'react-navigation';
-
+import AppDrawerNavigator from './drawNavigator';
 
 export default class Home extends Component {
   render() {
@@ -18,6 +18,7 @@ const AppStackNavigator = new StackNavigator({
   ScreenOne: { screen: ScreenOne },
   Signup: { screen: Signup },
   Login: { screen: Login },
+  AppDrawerNavigator: { screen: AppDrawerNavigator },
 });
 
 

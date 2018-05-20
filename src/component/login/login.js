@@ -5,7 +5,7 @@ import { StyleSheet, View, Text, Image, Button,
 
 import LoginForm from './loginForm';
 
-export default class login extends Component {
+export default class Login extends Component {
   render() {
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container} enabled>
@@ -14,7 +14,7 @@ export default class login extends Component {
             style={styles.logo}
             source={require('../../images/logo.png')} />
           <Text style={styles.title}>Hello First App</Text>
-          <Button title='Complete Login' onPress={() => this.props.navigation.navigate('Login')}/> 
+          <Button title='Complete Login' onPress={() => this.props.navigation.navigate('AppDrawerNavigator')}/>
         </View>
         <View style={styles.formContainer}>
           <LoginForm />
