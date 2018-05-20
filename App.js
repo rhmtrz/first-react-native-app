@@ -6,13 +6,15 @@ import {
   Text,
   View
 } from 'react-native';
-import Login from './src/component/login/login';
 
-type Props = {};
+
+
 export default class App extends Component<Props> {
   render() {
     return (
-      <Login />
+      <View style={styles.container}>
+        <Text>App</Text>
+      </View>
     );
   }
 }

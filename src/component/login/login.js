@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image,
+import { StyleSheet, View, Text, Image, Button,
   KeyboardAvoidingView
  } from 'react-native';
 
@@ -14,6 +14,7 @@ export default class login extends Component {
             style={styles.logo}
             source={require('../../images/logo.png')} />
           <Text style={styles.title}>Hello First App</Text>
+          <Button title='Complete Login' onPress={() => this.props.navigation.navigate('Login')}/> 
         </View>
         <View style={styles.formContainer}>
           <LoginForm />
